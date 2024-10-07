@@ -16,14 +16,13 @@ ezSpark is a Python package designed to simplify the process of uploading data f
 
 - **Python**: Version 3.6 or higher
 - **Apache Spark**: Compatible with your Python and Java versions
-- **Microsoft JDBC Driver for SQL Server**: https://go.microsoft.com/fwlink/?linkid=2283744
 - **Java jdk-11 (must create oracle account for download)**: https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox
 - **Hadoop - winutils.exe**: https://github.com/cdarlint/winutils/raw/master/hadoop-3.2.2/bin/winutils.exe
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ezSpark.git
+git clone https://github.com/devbyjulio/ezSpark.git
 cd EZSPARK
 ```
 ### Install Dependencies
@@ -129,6 +128,7 @@ To support more file types:
 - **Missing JAR Files**: Ensure all JAR files listed in `config.py` exist in the `libs/jars` directory.
 - **Environment Variable Errors**: Verify that `JAVA_HOME` and `HADOOP_HOME` are set correctly.
 - **Windows Auth for SQL**: if you are using windows authenticator, you'll need to copy the 'mssql-jdbc_auth-12.8.1.x64.dll' from the JDBC Driver ('auth\x64') to the 'jdk-11\bin' directory.
+    - JDBC Driver .zip downloader: https://go.microsoft.com/fwlink/?linkid=2283744
 - **Spark Session Errors**: Check Spark configurations and ensure compatibility with your Spark installation.
 - **Database Connection Issues**: Confirm database credentials and network connectivity.
 
