@@ -10,35 +10,6 @@ ezSpark is a Python package designed to simplify the process of uploading data f
 - **Data Type Casting**: Specify data types for each column to ensure data integrity.
 - **Configurable Spark Settings**: Customize Spark configurations like memory allocation and partitioning.
 
-## Project Structure
-
-EZSPARK/
-│
-├── ezSpark/                             # Main package directory
-│   └── jars/                        # JAR dependencies for the project
-│       ├── mssql-jdbc-12.8.1.jre8.jar
-│       ├── spark-excel_2.12-0.14.0.jar
-│       ├── poi-5.2.3.jar
-│       ├── poi-ooxml-schemas-4.1.2.jar
-│       ├── commons-codec-1.15.jar
-│       ├── commons-collections4-4.4.jar
-│       ├── commons-math3-3.6.1.jar
-│       ├── xmlbeans-3.1.0.jar
-│       ├── curvesapi-1.06.jar
-│       └── scala-xml_2.12-1.3.0.jar
-│   │
-│   ├── temp/                            # Temporary directory for storing intermediate files
-│   ├── config.py                        # Configuration settings (paths, environment variables, etc.)
-│   └── uploader.py                      # Main module handling the data uploading process
-│
-├── create_test_table.sql                # SQL script for creating test tables
-├── dataset_generator.py                 # Script for generating sample datasets
-├── example.py                           # Example script for demonstration
-├── requirements.txt                     # Python dependencies
-├── test_data.xlsx                       # Excel test dataset
-└── test_data.csv                       # csv test dataset
-
-
 ## Installation
 
 ### Prerequisites
@@ -61,34 +32,34 @@ pip install -r requirements.txt
 ```
 ### Set Up Environment Variable
 
-1. **JAVA_HOME**:
-    i. win + r -> SystemPropertiesAdvanced
-    ii. Go to environment variables
-    iii. Add new system variable
-    iv. Variable name: JAVA_HOME
-    v. Variable value: "C:your\path\to\jdk-11"
-    vi. Edit the 'Path' system variable
-    vii. Add a new 'Path' variable: %JAVA_HOME%\bin
-    viii. Ok -> Ok
-    ix. Restart computer
+- **JAVA_HOME**:
+    1. win + r -> SystemPropertiesAdvanced
+    2. Go to environment variables
+    3. Add new system variable
+    4. Variable name: JAVA_HOME
+    5. Variable value: "C:your\path\to\jdk-11"
+    6. Edit the 'Path' system variable
+    7. Add a new 'Path' variable: %JAVA_HOME%\bin
+    8. Ok -> Ok
+    9. Restart computer
 
 Test setup
 ```bash
 echo %JAVA_HOME%
 ```
 
-2. **HADOOP_HOME**:
-    i. Create a folder for hadoop files (e.g. "C:\hadoop\bin") if hadoop is not already installed
-    ii. Put 'winutils.exe' inside
-    iii. win + r -> SystemPropertiesAdvanced
-    iv. Go to environment variables
-    v. Add new system variable
-    vi. Variable name: HADOOP_HOME
-    vii. Variable value: "C:your\path\to\hadoop\bin"
-    viii. Edit the 'Path' system variable
-    ix. Add a new 'Path' variable: %HADOOP_HOME%\bin
-    x. Ok -> Ok
-    xi. Restart computer
+- **HADOOP_HOME**:
+    1. Create a folder for hadoop files (e.g. "C:\hadoop\bin") if hadoop is not already installed
+    2. Put 'winutils.exe' inside
+    3. win + r -> SystemPropertiesAdvanced
+    4. Go to environment variables
+    5. Add new system variable
+    6. Variable name: HADOOP_HOME
+    7. Variable value: "C:your\path\to\hadoop\bin"
+    8. Edit the 'Path' system variable
+    9. Add a new 'Path' variable: %HADOOP_HOME%\bin
+    10. Ok -> Ok
+    11. Restart computer
 
 Test setup
 ```bash
@@ -110,10 +81,10 @@ An example script example.py is provided to demonstrate how to use the package.
 
 5. **Customize Optional Parameters**:
 
-- **sheet_name**: For Excel files, specify the sheet name if it's not "Sheet1".
-- **spark_configs**: Adjust Spark configurations for performance tuning.
-- **repartition_num**: Set the number of partitions for the dataset.
-- **date_formats**: Set date formats when uploading csv files. If not set, will upload null.
+    - **sheet_name**: For Excel files, specify the sheet name if it's not "Sheet1".
+    - **spark_configs**: Adjust Spark configurations for performance tuning.
+    - **repartition_num**: Set the number of partitions for the dataset.
+    - **date_formats**: Set date formats when uploading csv files. If not set, will upload null.
 
 6. **Run the Script**: Execute your script to start the data upload process.
 
